@@ -1,0 +1,102 @@
+[
+    {
+        "model": "fleet.driver",
+        "pk": 1,
+        "fields": {
+            "first_name": "Jan",
+            "last_name": "Kowalski",
+            "license_number": "ABC123456",
+            "phone_number": "+48123456789",
+            "address": "Warszawa, ul. Główna 10"
+        }
+    },
+    {
+        "model": "fleet.driver",
+        "pk": 2,
+        "fields": {
+            "first_name": "Anna",
+            "last_name": "Nowak",
+            "license_number": "XYZ987654",
+            "phone_number": "+48198765432",
+            "address": "Kraków, ul. Stara 15"
+        }
+    },
+    {
+        "model": "fleet.vehicle",
+        "pk": 1,
+        "fields": {
+            "make": "Ford",
+            "model": "Focus",
+            "year": 2018,
+            "vin": "1FADP3F26JL271829",
+            "registration_number": "WW12345",
+            "assigned_driver": 1
+        }
+    },
+    {
+        "model": "fleet.vehicle",
+        "pk": 2,
+        "fields": {
+            "make": "Toyota",
+            "model": "Corolla",
+            "year": 2020,
+            "vin": "2T1BURHE5LC153614",
+            "registration_number": "KR67890",
+            "assigned_driver": 2
+        }
+    },
+    {
+        "model": "fleet.route",
+        "pk": 1,
+        "fields": {
+            "name": "Route A",
+            "start_location": "Warszawa",
+            "end_location": "Kraków",
+            "vehicle": 1,
+            "driver": 1,
+            "date_assigned": "2024-08-20T10:00:00Z",
+            "distance_km": "300.5",
+            "estimated_time_hours": "4.5",
+            "start_time": "2024-08-21T08:00:00Z",
+            "end_time": "2024-08-21T12:30:00Z"
+        }
+    },
+    {
+        "model": "fleet.route",
+        "pk": 2,
+        "fields": {
+            "name": "Route B",
+            "start_location": "Kraków",
+            "end_location": "Gdańsk",
+            "vehicle": 2,
+            "driver": 2,
+            "date_assigned": "2024-08-21T10:00:00Z",
+            "distance_km": "550.0",
+            "estimated_time_hours": "7.0",
+            "start_time": "2024-08-22T06:00:00Z",
+            "end_time": "2024-08-22T13:00:00Z"
+        }
+    },
+    {
+        "model": "fleet.vehiclestatus",
+        "pk": 1,
+        "fields": {
+            "vehicle": 1,
+            "fuel_level": "75%",
+            "brake_condition": "Good",
+            "tire_condition": "New",
+            "last_service_date": "2024-07-01"
+        }
+    },
+    {
+        "model": "fleet.vehiclestatus",
+        "pk": 2,
+        "fields": {
+            "vehicle": 2,
+            "fuel_level": "50%",
+            "brake_condition": "Fair",
+            "tire_condition": "Worn",
+            "last_service_date": "2024-08-01"
+        }
+    }
+]
